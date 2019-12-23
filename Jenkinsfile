@@ -5,7 +5,7 @@ node {
    }
    stage('Build code') {
       echo 'Build the package'
-      withMaven(jdk: 'JDK-1.8', maven: 'Maven-3.6.0') {
+      withMaven(jdk: 'JDK-1.8', maven: 'Maven-3.6.1') {
        sh 'mvn clean compile'
      }
    }
@@ -29,7 +29,7 @@ node {
     
    stage('Artifacts') {
        echo 'package the project artifacts..'
-       withMaven(jdk: 'JDK-1.8', maven: 'Maven-3.6.10) {
+       withMaven(jdk: 'JDK-1.8', maven: 'Maven-3.6.1) {
        sh 'mvn package'
      }
    
